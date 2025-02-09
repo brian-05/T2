@@ -1,5 +1,6 @@
 <html>
-<body bgcolor="#3377ff">
+<body bgcolor="#ffb233
+">
 <h2 align="center">Iniciar Sesion</h2>
 
 

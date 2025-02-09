@@ -9,7 +9,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Listado de Proveedores</title>
 </head>
-<body bgcolor="#3377ff">
+<body bgcolor="#ffb233
+">
 <h1 align="center">Listado de Proveedores</h1>
 <h2 align="center">
     <a href="ControladorProveedor?accion=Registrar" style="text-decoration: none">Registrar Proveedor</a>

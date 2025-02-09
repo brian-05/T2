@@ -6,7 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Actualizar Proveedor</title>
 </head>
-<body bgcolor="#3377ff">
+<body bgcolor="#ffb233
+">
 <h1 align="center">
 Actualizar Proveedor...
 </h1>
