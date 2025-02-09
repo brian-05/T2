@@ -1,8 +1,16 @@
 <html>
-<body bgcolor="#c5dec9">
-<h2 align="center">Logueo al sistema web de Almacen</h2>
-<h2 align="center">Version 1.0</h2>
-<h2 align="center">Logueo</h2>
+<body bgcolor="#3377ff">
+<h2 align="center">Iniciar Sesion</h2>
+
+
+<%
+// Mostrar mensaje de error si el login falla
+String error = request.getParameter("error");
+if (error != null && error.equals("1")) {
+    out.println("<p align='center' style='color:red;'>Usuario o contraseña incorrectos.</p>");
+}
+%>
+
 <table border="2" align="center">
 <form method="post" action="ControladorLogueo">
 <tr>
@@ -14,8 +22,7 @@
 <td><input type="password" name="password"></td>
 </tr>
 <tr>
-<td colspan="2" align="center"><input type="submit"
-value="ingresar al sistema"></td>
+<td colspan="2" align="center"><input type="submit" value="ingresar al sistema"></td>
 </tr>
 </form>
 </table>

@@ -5,45 +5,28 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-/**
- * Servlet implementation class ControladorLogueo
- */
+import DaoImp.ClassUsuarioImp;
+import model.TblUsuariocl2;
+
 public class ControladorLogueo extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ControladorLogueo() {
-        super();
-        // TODO Auto-generated constructor stub
+    private static final long serialVersionUID = 1L;
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String usuario = request.getParameter("usuario");
+        String password = request.getParameter("password");
+
+        ClassUsuarioImp usuarioDao = new ClassUsuarioImp();
+        TblUsuariocl2 usuarioEncontrado = usuarioDao.validarUsuario(usuario, password);
+
+        if (usuarioEncontrado != null) {
+            HttpSession session = request.getSession();
+            session.setAttribute("usuario", usuarioEncontrado.getUsuariocl2());
+
+            response.sendRedirect("MenuPrincipal.jsp");
+        } else {
+            response.sendRedirect("index.jsp?error=1");
+        }
     }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-		
-		
-		
-		//fin del metodo doget...
-	
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//doGet(request, response);
-		//validar datos...
-		
-		//redireccionamos
-		request.getRequestDispatcher("/MenuPrincipal.jsp").forward(request, response);
-	} //fin del metodo dopost...
-
 }
