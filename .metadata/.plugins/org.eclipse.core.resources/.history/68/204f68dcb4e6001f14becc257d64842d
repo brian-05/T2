@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Maven.com.jpa</groupId>
+  <artifactId>LPII_CL2_ACUNACAMPOSBRIAN</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>LPII_CL2_ACUNACAMPOSBRIAN Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  <dependencies>
+    <!-- Dependencia para pruebas unitarias -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version> <!-- Versión más reciente de JUnit -->
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Dependencia para Servlet API -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version> <!-- Versión más reciente -->
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Dependencia para MySQL JDBC Driver -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.33</version> <!-- Versión para MySQL 8.x -->
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>LPII_CL2_ACUNACAMPOSBRIAN</finalName>
+  </build>
+</project>
